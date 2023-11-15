@@ -445,7 +445,7 @@
 				<table role="presentation" width="100%" cellspacing="0" cellpadding="0" class="block-section" data-group="receipt" data-title="Receipt">
 					<tbody><tr>
 						<td class="column alt" style="border-radius: 10px; background-color: #ffffff; padding-top: 10px; padding-bottom: 10px; text-align: left;">
-							<div class="block-region block-repeat" style="margin: 0 20px; border-bottom: #ccc 1px solid; padding: 10px 0;">
+							<div class="block-region block-repeat block-remove" style="margin: 0 20px; border-bottom: #ccc 1px solid; padding: 10px 0;">
 								<!--[if true]>
 								<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="all: unset; opacity: 0;">
 									<tr>
@@ -477,7 +477,7 @@
 								</table>
 								<![endif]-->
 							</div>
-							<div class="block-region block-repeat" style="margin: 0 20px; border-bottom: #ccc 1px solid; padding: 10px 0;">
+							<div class="block-region block-repeat block-remove" style="margin: 0 20px; border-bottom: #ccc 1px solid; padding: 10px 0;">
 								<!--[if true]>
 								<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="all: unset; opacity: 0;">
 									<tr>
@@ -563,7 +563,7 @@
 									<!--[if !true]><!-->
 										<div class="column" style="display: table-cell; width: 80%; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
 									<!--<![endif]-->
-											<p class="mobile-center block-edit" data-block="receipt-totals-text" style="margin: 0; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 18px; line-height: 24px; color: #444444; font-weight: bold;">Total</p>
+											<p class="mobile-center block-edit" data-block="receipt-total-text" style="margin: 0; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 18px; line-height: 24px; color: #444444; font-weight: bold;">Total</p>
 									<!--[if !true]><!-->
 										</div>
 									<!--<![endif]-->
@@ -574,7 +574,7 @@
 									<!--[if !true]><!-->
 										<div class="column mobile-center" style="display: table-cell; width: 20%; padding-right: 10px; padding-left: 10px; text-align: right; vertical-align: middle;">
 									<!--<![endif]-->
-											<p class="block-edit" data-block="receipt-totals-price" style="margin: 0; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 18px; line-height: 24px; color: #444444; font-weight: bold;">$30</p>
+											<p class="block-edit" data-block="receipt-total-price" style="margin: 0; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 18px; line-height: 24px; color: #444444; font-weight: bold;">$30</p>
 									<!--[if !true]><!-->
 										</div>
 									<!--<![endif]-->
@@ -772,7 +772,12 @@
 					<table role="presentation" width="100%" cellspacing="0" cellpadding="0">
 						<tr>
 							<td class="column alt block-bgcolor" style="border-radius: 10px; background-color: #ffffff; padding: 30px; text-align: center;">
-								<h2 class="block-edit block-remove" data-block="callout-title" style="margin: 0; margin-bottom: 20px; font-size: 28px; line-height: 32px; color: #444444; text-align: center; font-weight: 600;">Give us a try</h2>
+								<div class="block-region block-remove" data-group="callout-titles">
+									<h2 class="block-edit" data-block="callout-title" style="margin: 0; margin-bottom: 20px; font-size: 28px; line-height: 32px; color: #444444; text-align: center; font-weight: 600;">Give us a try</h2>
+								</div>
+								<div class="block-region block-remove" data-group="callout-titles">
+									<h2 class="block-edit" data-block="callout-title" style="margin: 0; margin-bottom: 20px; font-size: 28px; line-height: 32px; color: #3c97db; text-align: center; font-weight: 600;">Give us a try</h2>
+								</div>
 								<p class="block-edit block-remove" data-block="callout-text" style="margin: 0; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">With your account is a 30-day trial to use all the features that our tool set has to offer. Enough time to start seeing the effort you put in for your business starting to pay off!</p>
 								<div style="width: 100%; height: 20px;"><p style="float: left; margin: 0; margin-bottom: 20px; width: 100%; line-height: 0;">&nbsp;</p></div>
 								<span class="btn block-region block-remove" style="display: inline-block; border-radius: 50px; background: #3c97db; mso-padding-alt: 0;"><!--[if mso]><i style="letter-spacing: 20px; mso-font-width: -100%; mso-text-raise: 30pt;">&nbsp;</i><![endif]--><a href="#" class="block-edit" data-block="callout-cta" style="display: inline-block; padding: 12px 25px; font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1; text-decoration: none; text-align: center; color: #ffffff; mso-text-raise: 15pt;" target="_blank">Continue using for free</a><!--[if mso]><i style="letter-spacing: 20px; mso-font-width: -100%; mso-text-raise: 30pt;">&nbsp;</i><![endif]--></span>
