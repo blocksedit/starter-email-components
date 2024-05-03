@@ -20,4 +20,4 @@ Modularly designed email components that work across email clients, with example
 
 ## Components included ##
 
-<img src="starter-template-sections-mobile.png" />
+<img src="starter-components-sections.png" />
