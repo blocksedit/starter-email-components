@@ -1,12 +1,23 @@
 # Starter Email Components
-### HTML template of accessible and responsive modules to use for your emails
+### HTML design system of accessible and responsive email templates to use for your emails
 
-A modularly designed master email template that works across email clients, with essential email layouts and elements.
+Modularly designed email components that work across email clients, with example template layouts to get started with.
 
 ## Features ##
-- Modular design with stackable sections and standalone elements
-- Responsive across mobile devices and screen sizes
+- 15 commonly used design patterns
+- 10 template layouts, including: newsletters, on-boarding emails, announcements, events, products, orders, and notifications
+- Stackable and standalone elements
+- Responsive across screen sizes
 - Dark mode compatibility
-- Tested on Gmail and Android, Apple Mail, Microsoft Outlook, and Yahoo! Mail and AOL
 - Semantic code, optimized for accessibility
 - Blocks Edit ready for drag and drop editing
+
+## Email clients tested ##
+- Gmail (and Android)
+- Apple Mail
+- Microsoft Outlook (and Windows)
+- Yahoo! Mail (and AOL)
+
+## Components included ##
+
+<img src="starter-template-sections-mobile.png" />
