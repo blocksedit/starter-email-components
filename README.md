@@ -21,3 +21,7 @@ Modularly designed email components that work across email clients, with example
 ## Components included ##
 
 <img src="starter-components-sections.png" />
+
+## Layout templates included ##
+
+<img src="starter-components-layouts.png" />
