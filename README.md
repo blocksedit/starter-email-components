@@ -10,6 +10,7 @@ Templates include newsletters, on-boarding emails, announcements, events, produc
 - Responsive across screen sizes
 - Dark mode compatibility
 - Semantic code, optimized for accessibility
+- Modern code, with legacy code version
 - Blocks Edit ready for drag and drop editing
 
 ## Email clients tested ##
