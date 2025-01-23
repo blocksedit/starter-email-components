@@ -106,7 +106,7 @@
 			width: 100%;
 			height: auto;
 		}
-		.btn a {
+		a.btn {
 			display: inline-block;
 			border-radius: 50px;
 			background: #3c97db;
@@ -144,6 +144,33 @@
 			background-color: #ffffff;
 			overflow: hidden;
 		}
+		.container {
+			display: table;
+			width: 100%;
+		}
+		.header .logo {
+			display: inline-block;
+			float: left;
+			width: 75px;
+			height: auto;
+		}
+		.header .tagline {
+			vertical-align: middle;
+			text-align: right;
+			font-size: 16px;
+		}
+		.footer {
+			max-width: 100%;
+			margin: 0 auto;
+			padding-bottom: 20px;
+			font-size: 14px;
+			line-height: 18px;
+			text-align: center;
+		}
+		.footer .unsubscribe {
+			color: #444444;
+			text-decoration: none;
+		}
 
 /* Responsive adjustments */
 		@media screen and (max-width: 480px) {
@@ -159,6 +186,10 @@
 			.column.alt {
 				padding-top: 14px !important;
 				padding-bottom: 0 !important;
+			}
+			.column.box {
+				padding-top: 14px !important;
+				padding-bottom: 14px !important;
 			}
 			.column.alt:last-child {
 				padding-bottom: 14px !important;
@@ -196,10 +227,8 @@
 			.column.alt {
 				background-color: #1b1b1b !important;
 			}
-			.btn {
+			a.btn {
 				background: #a6a6a6 !important;
-			}
-			.btn a {
 				color: #404040 !important;
 			}
 		}
@@ -218,14 +247,12 @@
 			<div class="content">
 
 				<div class="spacer spacer-xl"><p>&nbsp;</p></div>
-				<div class="block-region block-remove" data-group="header">
-					<div style="display: table; width: 100%;">
-						<div class="column col col-4">
-							<a href="#"><img class="block-edit" data-block="header-logo" height="auto" src="https://blocksedit.com/starter/img/logo.png" width="75" alt="" style="display: inline-block; float: left; width: 75px; height: auto;"></a>
-						</div>
-						<div class="column col col-8" style="vertical-align: middle; text-align: right;">
-							<p class="block-edit block-maxchar-50 block-remove" data-block="header-tagline" style="font-size: 16px;">Welcome to Our Organization&trade;</h1>
-						</div>
+				<div class="container header block-region block-remove" data-group="header">
+					<div class="column col col-4">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/logo.png" width="75" alt="" class="logo block-edit" data-block="header-logo"></a>
+					</div>
+					<div class="column col col-8 tagline">
+						<p class="block-edit block-maxchar-50 block-remove" data-block="header-tagline">Welcome to Our Organization&trade;</h1>
 					</div>
 				</div>
 
@@ -239,33 +266,21 @@
 					<p class="block-edit block-remove" data-block="content-standard-text">Running your business can get complicated but it doesn't have to! It requires focusing on basic principles and the core of what makes you and your product or service unique. <a href="#">We'll help you with that focus.</a></p>
 
 <!-- Titles -->
-					<div class="block-component" data-group="title-h1" data-title="Title - H1">
-						<h1 class="block-edit" data-block="title-h1-text">A better way to run your business</h1>
-					</div>
-					<div class="block-component" data-group="component-title-h2" data-title="Title - H2">
-						<h2 class="block-edit" data-block="title-h2-text">Essential products we recommend</h2>
-					</div>
-					<div class="block-component" data-group="title-h3" data-title="Title - H3">
-						<h3 class="block-edit" data-block="title-h3-text">Help docs</h3>
-					</div>
+					<h1 class="block-component block-edit" data-block="title-h1-text" data-title="Title - H1">A better way to run your business</h1>
+					<h2 class="block-component block-edit" data-block="title-h2-text" data-title="Title - H2">Essential products we recommend</h2>
+					<h3 class="block-component block-edit" data-block="title-h3-text" data-title="Title - H3">Help docs</h3>
 
 <!-- Fluid image -->
-					<div class="block-component" data-group="fluid-image" data-title="Fluid image">
-						<img src="https://blocksedit.com/starter/img/photo-intro.jpg" width="600" height="auto" alt="" class="image block-edit" data-block="fluid-image-image">
-					</div>
+					<img src="https://blocksedit.com/starter/img/photo-intro.jpg" width="600" height="auto" alt="" class="image block-component block-edit" data-block="fluid-image-image" data-title="Fluid image">
 
 <!-- Spacer -->
-					<div class="spacer block-component" data-group="component-spacer" data-title="Spacer">
-						<p>&nbsp;</p>
-					</div>
+					<div class="spacer block-component" data-group="component-spacer" data-title="Spacer"><p>&nbsp;</p></div>
 
 <!-- Text -->
-					<div class="block-component" data-group="component-text" data-title="Text">
-						<p data-block="component-text-text">Running your business can get complicated but it doesn't have to! It requires focusing on basic principles and the core of what makes you and your product or service unique. We'll help you with that focus.</p>
-					</div>
+					<p class="block-component" data-block="component-text-text" data-title="Text">Running your business can get complicated but it doesn't have to! It requires focusing on basic principles and the core of what makes you and your product or service unique. We'll help you with that focus.</p>
 
 <!-- Button -->
-					<div class="btn block-component" data-group="compontent-button" data-title="Button"><a href="#" class="block-edit" data-block="component-button-cta" target="_blank">Get started</a></div>
+					<a href="#" class="btn block-component block-edit" data-block="component-button" data-title="Button" target="_blank">Get started</a>
 
 				</div>
 
@@ -275,88 +290,78 @@
 
 <!-- Intro/hero section -->
 				<div class="column block-section" data-group="intro-hero" data-title="Intro/hero">
-					<h1 class="block-edit block-remove" data-block="intro-hero-title" style="text-align: left;">A better way to run your business</h1>
+					<h1 class="block-edit block-remove" data-block="intro-hero-title">A better way to run your business</h1>
 					<img src="https://blocksedit.com/starter/img/photo-intro.jpg" width="600" height="auto" alt="" class="image block-edit block-remove" data-block="intro-hero-image">
 					<div class="spacer block-edit block-remove" data-block="intro-hero-spacer-1"><p>&nbsp;</p></div>
 					<p class="block-edit block-remove" data-block="intro-hero-text">Running your business can get complicated but it doesn't have to! It requires focusing on basic principles and the core of what makes you and your product or service unique. We'll help you with that focus.</p>
 					<div class="spacer block-edit block-remove" data-block="intro-hero-spacer-2"><p>&nbsp;</p></div>
-					<div class="btn block-region block-remove"><a href="#" class="block-edit" data-block="intro-hero-cta" target="_blank">Get started</a></div>
+					<a href="#" class="btn block-edit block-remove" data-block="intro-hero-cta" target="_blank">Get started</a>
 				</div>
 
 				<div class="column block-section" data-group="intro-hero" style="text-align: center;">
 					<img src="https://blocksedit.com/starter/img/photo-intro.jpg" width="600" height="auto" alt="" class="image block-edit block-remove" data-block="intro-hero-image">
 					<div class="spacer block-edit block-remove" data-block="intro-hero-spacer-1"><p>&nbsp;</p></div>
-					<h1 class="block-edit block-remove" data-block="intro-hero-title" style="text-align: center;">A better way to run your business</h1>
-					<p class="block-edit block-remove" data-block="intro-hero-text" style="text-align: center;">Running your business can get complicated but it doesn't have to! It requires focusing on basic principles and the core of what makes you and your product or service unique. We'll help you with that focus.</p>
+					<h1 class="block-edit block-remove" data-block="intro-hero-title">A better way to run your business</h1>
+					<p class="block-edit block-remove" data-block="intro-hero-text">Running your business can get complicated but it doesn't have to! It requires focusing on basic principles and the core of what makes you and your product or service unique. We'll help you with that focus.</p>
 					<div class="spacer block-edit block-remove" data-block="intro-hero-spacer-2"><p>&nbsp;</p></div>
-					<p style="text-align: center;"><div class="btn block-region block-remove"><a href="#" class="block-edit" data-block="intro-hero-cta" target="_blank">Get started</a></div></p>
+					<p><a href="#" class="btn block-edit block-remove" data-block="intro-hero-cta" target="_blank">Get started</a></p>
 				</div>
 
 <!-- Callout section -->
-				<div class="column alt box block-section block-bgcolor" data-group="callout" data-title="Callout" style="padding: 30px; text-align: center;">
-					<div class="block-region block-remove" data-group="callout-titles">
-						<h2 class="block-edit" data-block="callout-title" style="text-align: center;">Give us a try</h2>
-					</div>
-					<div class="block-region block-remove" data-group="callout-titles">
-						<h2 class="block-edit" data-block="callout-title" style="color: #3c97db; text-align: center;">Give us a try</h2>
-					</div>
+				<div class="column box block-section block-bgcolor" data-group="callout" data-title="Callout" style="padding: 30px; text-align: center;">
+					<h2 class="block-edit block-remove" data-group="callout-titles" data-block="callout-title">Give us a try</h2>
+					<h2 class="block-edit block-remove" data-group="callout-titles" data-block="callout-title" style="color: #3c97db;">Give us a try</h2>
 					<p class="block-edit block-remove" data-block="callout-text">With your account is a 30-day trial to use all the features that our tool set has to offer. Enough time to start seeing the effort you put in for your business starting to pay off!</p>
 					<div class="spacer"><p>&nbsp;</p></div>
-					<div class="btn block-region block-remove"><a href="#" class="block-edit" data-block="callout-cta" target="_blank">Continue using for free</a></div>
+					<a href="#" class="btn block-edit block-remove" data-block="callout-cta" target="_blank">Continue using for free</a>
 				</div>
 
 <!-- Individual listing section -->
-				<div class="column alt box block-section" data-group="individual-listing" data-title="Individual listing" style="text-align: left;">
-					<div style="display: table; width: 100%;">
-						<div class="column col col-4" style="text-align: center; vertical-align: middle;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-app.jpg" width="190" alt="" class="fill block-edit" data-block="individual-listing-image" style="display: block; width: 190px; height: auto;"></a>
-						</div>
-						<div class="column col col-8" style="padding-top: 10px; padding-right: 30px; padding-bottom: 10px; padding-left: 20px; vertical-align: middle;">
-							<h3 class="block-edit block-remove" data-block="individual-listing-title" style="text-align: left;">New tool available</h3>
-							<p class="text-sm block-edit" data-block="individual-listing-text">We've added this feature based on user feedback and research. We also eat our own dog food and have been using it with our internal team the last few months as we've fine tuned it!</p>
-						</div>
+				<div class="container column alt box block-section" data-group="individual-listing" data-title="Individual listing">
+					<div class="column col col-4" style="text-align: center; vertical-align: middle;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-app.jpg" width="190" alt="" class="fill block-edit" data-block="individual-listing-image" style="display: block; width: 190px; height: auto;"></a>
+					</div>
+					<div class="column col col-8" style="padding-top: 10px; padding-right: 30px; padding-bottom: 10px; padding-left: 20px; vertical-align: middle;">
+						<h3 class="block-edit block-remove" data-block="individual-listing-title">New tool available</h3>
+						<p class="text-sm block-edit" data-block="individual-listing-text">We've added this feature based on user feedback and research. We also eat our own dog food and have been using it with our internal team the last few months as we've fine tuned it!</p>
 					</div>
 				</div>
 
 <!-- Two-column section -->
-				<div class="block-section" data-group="two-column" data-title="Two-column">
-					<div style="display: table; width: 100%;">
-						<div class="column col col-6" style="padding-right: 7px;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-app-md.jpg" width="290" alt="" class="fill block-edit block-remove" data-block="two-column-image-1" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 290px; height: auto;"></a>
-							<h3 class="block-edit block-remove" data-block="two-column-title-1" style="text-align: left;">New tool available</h3>
-							<p class="text-sm block-edit" data-block="two-column-text-1" style="margin-bottom: 10px;">We've added this feature based on user feedback and research. We also eat our own dog food and have been using it with our internal team the last few months as we've fine tuned it!</p>
-							<div class="btn block-region block-remove"><a href="#" class="block-edit" data-block="two-column-cta-1" target="_blank">More info</a></div>
-						</div>
-						<div class="column col col-6" style="padding-left: 7px;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-watch-app-md.jpg" width="290" alt="" class="fill block-edit block-remove" data-block="two-column-image-2" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 290px; height: auto;"></a>
-							<h3 class="block-edit block-remove" data-block="two-column-title-2" style="text-align: left;">Works across devices</h3>
-							<p class="text-sm block-edit" data-block="two-column-text-2" style="margin-bottom: 10px;">Either on your desktop, mobile phone, watch, car infotainment system, portable kitchen display, home TV, or fridge monitor, integrated and ready to work for you.</p>
-							<div class="btn block-region block-remove"><a href="#" class="block-edit" data-block="two-column-cta-2" target="_blank">More info</a></div>
-						</div>
+				<div class="container block-section" data-group="two-column" data-title="Two-column">
+					<div class="column col col-6" style="padding-right: 7px;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-app-md.jpg" width="290" alt="" class="fill block-edit block-remove" data-block="two-column-image-1" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 290px; height: auto;"></a>
+						<h3 class="block-edit block-remove" data-block="two-column-title-1">New tool available</h3>
+						<p class="text-sm block-edit" data-block="two-column-text-1" style="margin-bottom: 10px;">We've added this feature based on user feedback and research. We also eat our own dog food and have been using it with our internal team the last few months as we've fine tuned it!</p>
+						<a href="#" class="btn block-edit block-remove" data-block="two-column-cta-1" target="_blank">More info</a>
+					</div>
+					<div class="column col col-6" style="padding-left: 7px;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-watch-app-md.jpg" width="290" alt="" class="fill block-edit block-remove" data-block="two-column-image-2" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 290px; height: auto;"></a>
+						<h3 class="block-edit block-remove" data-block="two-column-title-2">Works across devices</h3>
+						<p class="text-sm block-edit" data-block="two-column-text-2" style="margin-bottom: 10px;">Either on your desktop, mobile phone, watch, car infotainment system, portable kitchen display, home TV, or fridge monitor, integrated and ready to work for you.</p>
+						<a href="#" class="btn block-edit block-remove" data-block="two-column-cta-2" target="_blank">More info</a>
 					</div>
 				</div>
 
 <!-- Three-column section -->
-				<div class="block-section" data-group="three-column" data-title="Three-column">
-					<div style="display: table; width: 100%;">
-						<div class="column col col-4" style="padding-right: 7px;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-app.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="three-column-image-1" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 190px; height: auto;"></a>
-							<h3 class="block-edit block-remove" data-block="three-column-title-1" style="text-align: left;">Tool available</h3>
-							<p class="text-sm block-edit" data-block="three-column-text-1" style="margin-bottom: 10px;">We've added this feature based on user feedback and research. We also eat our own dog food and have used it with our internal team the last few months as we've fine tuned it!</p>
-							<div class="btn block-region block-remove"><a href="#" class="block-edit" data-block="three-column-cta-1" target="_blank">More info</a></div>
-						</div>
-						<div class="column col col-4" style="padding-right: 7px; padding-left: 7px;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-watch-app.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="three-column-image-2" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 190px; height: auto;"></a>
-							<h3 class="block-edit block-remove" data-block="three-column-title-2" style="text-align: left;">Across devices</h3>
-							<p class="text-sm block-edit" data-block="three-column-text-2" style="margin-bottom: 10px;">Either on your desktop, mobile phone, watch, car infotainment system, portable kitchen display, home TV, or fridge monitor, integrated and ready to work for you.</p>
-							<div class="btn block-region block-remove"><a href="#" class="block-edit" data-block="three-column-cta-2" target="_blank">More info</a></div>
-						</div>
-						<div class="column col col-4" style="padding-left: 7px;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-tablet-app.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="three-column-image-3" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 190px; height: auto;"></a>
-							<h3 class="block-edit block-remove" data-block="three-column-title-3" style="text-align: left;">Customize it</h3>
-							<p class="text-sm block-edit" data-block="three-column-text-3" style="margin-bottom: 10px;">Our modular system allows for fully customizable options that work around your business needs, your individual preferences, as well as your team's culture and their own habits.</p>
-							<div class="btn block-region block-remove"><a href="#" class="block-edit" data-block="three-column-cta-3" target="_blank">More info</a></div>
-						</div>
+				<div class="container block-section" data-group="three-column" data-title="Three-column">
+					<div class="column col col-4" style="padding-right: 7px;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-app.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="three-column-image-1" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 190px; height: auto;"></a>
+						<h3 class="block-edit block-remove" data-block="three-column-title-1">Tool available</h3>
+						<p class="text-sm block-edit" data-block="three-column-text-1" style="margin-bottom: 10px;">We've added this feature based on user feedback and research. We also eat our own dog food and have used it with our internal team the last few months as we've fine tuned it!</p>
+						<a href="#" class="btn block-edit block-remove" data-block="three-column-cta-1" target="_blank">More info</a>
+					</div>
+					<div class="column col col-4" style="padding-right: 7px; padding-left: 7px;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-watch-app.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="three-column-image-2" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 190px; height: auto;"></a>
+						<h3 class="block-edit block-remove" data-block="three-column-title-2">Across devices</h3>
+						<p class="text-sm block-edit" data-block="three-column-text-2" style="margin-bottom: 10px;">Either on your desktop, mobile phone, watch, car infotainment system, portable kitchen display, home TV, or fridge monitor, integrated and ready to work for you.</p>
+						<a href="#" class="btn block-edit block-remove" data-block="three-column-cta-2" target="_blank">More info</a>
+					</div>
+					<div class="column col col-4" style="padding-left: 7px;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-tablet-app.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="three-column-image-3" style="display: block; margin-bottom: 10px; border-radius: 5px; width: 190px; height: auto;"></a>
+						<h3 class="block-edit block-remove" data-block="three-column-title-3">Customize it</h3>
+						<p class="text-sm block-edit" data-block="three-column-text-3" style="margin-bottom: 10px;">Our modular system allows for fully customizable options that work around your business needs, your individual preferences, as well as your team's culture and their own habits.</p>
+						<a href="#" class="btn block-edit block-remove" data-block="three-column-cta-3" target="_blank">More info</a>
 					</div>
 				</div>
 
@@ -367,7 +372,7 @@
 							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/icon-forums.png" width="80" alt="" class="fill block-edit" data-block="information-listing-image"style="display: inline-block; width: 80px; height: auto;"></a>
 						</div>
 						<div class="column col col-9" style="padding-top: 10px; padding-right: 30px; padding-bottom: 10px; vertical-align: middle;">
-							<h3 class="block-edit block-remove" data-block="information-listing-title" style="text-align: left;">Help docs</h3>
+							<h3 class="block-edit block-remove" data-block="information-listing-title">Help docs</h3>
 							<p class="text-sm block-edit block-remove" data-block="information-listing-text">Start here to get an overview of the options you have on your dashboard and learn how everything works.</p>
 						</div>
 					</div>
@@ -431,61 +436,57 @@
 <!-- Short info listing section -->
 				<div class="block-section" data-group="short-info-listing" data-title="Short info listing">
 					<h2 class="block-edit block-remove" data-block="short-info-listing-title" style="text-align: center;">Special guests</h2>
-					<div style="display: table; width: 100%;">
-						<div class="column col col-3" style="padding-right: 7px; text-align: center;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/profile-3.jpg" width="120" alt="" class="fill block-edit" data-block="short-info-listing-image-1" style="display: inline-block; border-radius: 100%; width: 120px; height: auto;"></a>
-							<p class="text-sm block-edit" data-block="short-info-listing-text-1"><strong>Mariah Perica</strong><br>CEO</p>
-						</div>
-						<div class="column col col-3" style="padding-right: 7px; padding-left: 7px; text-align: center;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/profile-2.jpg" width="120" alt="" class="fill block-edit" data-block="short-info-listing-image-2" style="display: inline-block; border-radius: 100%; width: 120px; height: auto;"></a>
-							<p class="text-sm block-edit" data-block="short-info-listing-text-2"><strong>Derick Watts</strong><br>VP Engineering</p>
-						</div>
-						<div class="column col col-3" style="padding-right: 7px; padding-left: 7px; text-align: center;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/profile-1.jpg" width="120" alt="" class="fill block-edit" data-block="short-info-listing-image-3" style="display: inline-block; border-radius: 100%; width: 120px; height: auto;"></a>
-							<p class="text-sm block-edit" data-block="short-info-listing-text-3"><strong>James Thompson</strong><br>VP Operations</p>
-						</div>
-						<div class="column col col-3" style="padding-left: 7px; text-align: center;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/profile-5.jpg" width="120" alt="" class="fill block-edit block-remove" data-block="short-info-listing-image-4" style="display: inline-block; border-radius: 100%; width: 120px; height: auto;"></a>
-							<p class="text-sm block-edit" data-block="short-info-listing-text-4"><strong>Jane Wagner</strong><br>VP Marketing</p>
-						</div>
+					<div class="column col col-3" style="padding-right: 7px; text-align: center;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/profile-3.jpg" width="120" alt="" class="fill block-edit" data-block="short-info-listing-image-1" style="display: inline-block; border-radius: 100%; width: 120px; height: auto;"></a>
+						<p class="text-sm block-edit" data-block="short-info-listing-text-1"><strong>Mariah Perica</strong><br>CEO</p>
+					</div>
+					<div class="column col col-3" style="padding-right: 7px; padding-left: 7px; text-align: center;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/profile-2.jpg" width="120" alt="" class="fill block-edit" data-block="short-info-listing-image-2" style="display: inline-block; border-radius: 100%; width: 120px; height: auto;"></a>
+						<p class="text-sm block-edit" data-block="short-info-listing-text-2"><strong>Derick Watts</strong><br>VP Engineering</p>
+					</div>
+					<div class="column col col-3" style="padding-right: 7px; padding-left: 7px; text-align: center;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/profile-1.jpg" width="120" alt="" class="fill block-edit" data-block="short-info-listing-image-3" style="display: inline-block; border-radius: 100%; width: 120px; height: auto;"></a>
+						<p class="text-sm block-edit" data-block="short-info-listing-text-3"><strong>James Thompson</strong><br>VP Operations</p>
+					</div>
+					<div class="column col col-3" style="padding-left: 7px; text-align: center;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/profile-5.jpg" width="120" alt="" class="fill block-edit block-remove" data-block="short-info-listing-image-4" style="display: inline-block; border-radius: 100%; width: 120px; height: auto;"></a>
+						<p class="text-sm block-edit" data-block="short-info-listing-text-4"><strong>Jane Wagner</strong><br>VP Marketing</p>
 					</div>
 				</div>
 
 <!-- Product listing section -->
 				<div class="block-section" data-group="product-listing" data-title="Product listing">
 					<h2 class="block-edit block-remove" data-block="product-listing-title" style="text-align: center;">Essential products we recommend</h2>
-					<div style="display: table; width: 100%;">
-						<div class="column col col-4" style="padding-right: 7px;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-glasses.jpg" width="190" alt="" class="fill block-edit" data-block="product-listing-image-1" style="display: block; border-radius: 5px; width: 190px; height: auto;"></a>
-							<div class="block-region block-remove">
-								<div style="float: left; padding-top: 5px;">
-									<p class="block-edit" data-block="product-listing-text-1" style="font-weight: 600;">Sunglasses</p>
-								</div>
-								<div style="float: right; padding-top: 5px; text-align: right;">
-									<p class="block-edit" data-block="product-listing-price-1">$30</p>
-								</div>
+					<div class="column col col-4" style="padding-right: 7px;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-glasses.jpg" width="190" alt="" class="fill block-edit" data-block="product-listing-image-1" style="display: block; border-radius: 5px; width: 190px; height: auto;"></a>
+						<div class="block-region block-remove" style="display: inline-block; width: 100%;">
+							<div style="float: left; padding-top: 5px;">
+								<p class="block-edit" data-block="product-listing-text-1" style="font-weight: 600;">Sunglasses</p>
+							</div>
+							<div style="float: right; padding-top: 5px; text-align: right;">
+								<p class="block-edit" data-block="product-listing-price-1">$30</p>
 							</div>
 						</div>
-						<div class="column col col-4" style="padding-right: 7px; padding-left: 7px;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-banana.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="product-listing-image-2" style="display: block; border-radius: 5px; width: 190px; height: auto;"></a>
-							<div class="block-region block-remove">
-								<div style="float: left; padding-top: 5px;">
-									<p class="block-edit" data-block="product-listing-text-2" style="font-weight: 600;">Banana</p>
-								</div>
-								<div style="float: right; padding-top: 5px; text-align: right;">
-									<p class="block-edit" data-block="product-listing-price-2">$2</p>
-								</div>
+					</div>
+					<div class="column col col-4" style="padding-right: 7px; padding-left: 7px;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-banana.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="product-listing-image-2" style="display: block; border-radius: 5px; width: 190px; height: auto;"></a>
+						<div class="block-region block-remove" style="display: inline-block; width: 100%;">
+							<div style="float: left; padding-top: 5px;">
+								<p class="block-edit" data-block="product-listing-text-2" style="font-weight: 600;">Banana</p>
+							</div>
+							<div style="float: right; padding-top: 5px; text-align: right;">
+								<p class="block-edit" data-block="product-listing-price-2">$2</p>
 							</div>
 						</div>
-						<div class="column col col-4" style="padding-left: 7px;">
-							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-plant.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="product-listing-image-3" style="display: block; border-radius: 5px; width: 190px; height: auto;"></a>
-							<div class="block-region block-remove">
-								<div style="float: left; padding-top: 5px;">
-									<p class="block-edit" data-block="product-listing-text-3" style="font-weight: 600;">Plant</p>
-								</div>
-								<div style="float: right; padding-top: 5px; text-align: right;">
-									<p class="block-edit" data-block="product-listing-price-3">$15</p>
-								</div>
+					</div>
+					<div class="column col col-4" style="padding-left: 7px;">
+						<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-plant.jpg" width="190" alt="" class="fill block-edit block-remove" data-block="product-listing-image-3" style="display: block; border-radius: 5px; width: 190px; height: auto;"></a>
+						<div class="block-region block-remove" style="display: inline-block; width: 100%;">
+							<div style="float: left; padding-top: 5px;">
+								<p class="block-edit" data-block="product-listing-text-3" style="font-weight: 600;">Plant</p>
+							</div>
+							<div style="float: right; padding-top: 5px; text-align: right;">
+								<p class="block-edit" data-block="product-listing-price-3">$15</p>
 							</div>
 						</div>
 					</div>
@@ -570,13 +571,13 @@
 						<div class="spacer"><p>&nbsp;</p></div>
 						<p class="block-edit" data-block="message-text" style="font-size: 16px; line-height: 22px;"><strong>Today at 3:07pm:</strong><br>I either go to bed, or wake up the next morning, and look at a running list of 10-20 items that I keep on my calendar under an all-day event titled 'Today'. I pick at least two items I would like to get done for the day and move the rest to the following day.</p>
 						<div class="spacer"><p>&nbsp;</p></div>
-						<div class="btn"><a href="#" class="block-edit" data-block="message-cta" target="_blank">Reply</a></div>
+						<a href="#" class="btn block-edit" data-block="message-cta" target="_blank">Reply</a>
 					</div>
 				</div>
 
 <!-- Product section -->
 				<div class="column alt box block-section" data-group="product" data-title="Product" style="padding-top: 10px; padding-bottom: 10px; text-align: left;">
-					<div class="block-region block-repeat" style="display: table; width: 100%;">
+					<div class="container block-region block-repeat">
 						<div class="column col col-4" style="padding-top: 10px; text-align: center; vertical-align: top;">
 							<a href="#"><img height="auto" src="https://blocksedit.com/starter/img/product-glasses.jpg" width="170" alt="" class="fill block-edit" data-block="product-image" style="display: inline-block; border-radius: 5px; width: 170px; height: auto;"></a>
 						</div>
@@ -584,7 +585,7 @@
 							<h3 class="block-edit" data-block="product-title" style="text-align: left;">Sunglasses &ndash; $30</h3>
 							<p class="text-sm block-edit" data-block="product-text">Style: Retro<br>Color: Black</p>
 							<div class="spacer"><p>&nbsp;</p></div>
-							<div class="btn"><a href="#" class="block-edit" data-block="product-cta" target="_blank">Order now</a></div>
+							<a href="#" class="btn block-edit" data-block="product-cta" target="_blank">Order now</a>
 						</div>
 					</div>
 				</div>
@@ -595,7 +596,7 @@
 					<p><img src="https://blocksedit.com/starter/img/icon-stars.png" width="400" alt="" class="fill block-edit" data-block="survey-image" style="display: inline-block; width: 400px; height: auto;"></p>
 					<p class="block-edit block-remove" data-block="survey-text">Help us improve our process by filling out a quick survey on your experience shopping with us.</p>
 					<div class="spacer"><p>&nbsp;</p></div>
-					<div class="btn block-region block-remove"><a href="#" class="block-edit" data-block="survey-cta" target="_blank">Submit survey</a></div>
+					<a href="#" class="btn block-edit block-remove" data-block="survey-cta" target="_blank">Submit survey</a>
 				</div>
 
 <!-- Profile card section -->
@@ -608,7 +609,7 @@
 						<p class="text-sm block-edit" data-block="profile-card-membership"><span style="border-radius: 5px; border: #444444 2px solid; padding: 2px 6px; font-size: 14px; font-weight: 500;">Member since May 2021</span></p>
 						<div class="spacer"><p>&nbsp;</p></div>
 						<img height="auto" src="https://blocksedit.com/starter/img/icon-star.png" width="35" alt="" style="display: inline-block; width: 35px; height: auto;"> <h2 class="block-edit" data-block="profile-card-points" style="display: inline-block; vertical-align: middle;">3,410 points</h2>
-						<div class="btn"><a href="#" class="block-edit" data-block="profile-card-cta" target="_blank">View rewards</a></div>
+						<a href="#" class="btn block-edit" data-block="profile-card-cta" target="_blank">View rewards</a>
 					</div>
 				</div>
 
@@ -620,12 +621,12 @@
 
 <!-- Footer -->
 
-		<div class="main" style="max-width: 100%; margin: 0 auto; padding-bottom: 20px;">
-			<p class="block-edit" style="font-size: 14px; line-height: 18px; text-align: center;">Built and edited using <a href="https://blocksedit.com" target="_blank">Blocks Edit</a>.<br>
+		<div class="main footer">
+			<p class="block-edit">Built and edited using <a href="https://blocksedit.com" target="_blank">Blocks Edit</a>.<br>
 				<br>
 				© Our Organization, 123 Fake Street, Phoenix, AZ 85281<br>
 				<br>
-				<a href="#" target="_blank" style="color: #444444; text-decoration: none;">Unsubscribe</a>
+				<a href="#" target="_blank" class="unsubscribe">Unsubscribe</a>
 			</p>
 		</div>
 
